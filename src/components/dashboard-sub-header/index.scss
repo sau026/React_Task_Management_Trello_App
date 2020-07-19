@@ -1,0 +1,41 @@
+@import './../../styles/colors';
+
+.dashboard_sub_header{
+  display: flex;
+  padding: 1rem 1rem;
+  margin-top: 8px;
+  align-items: center;
+  justify-content: space-between;
+  div{
+      display: flex;
+      &:nth-child(1){
+          align-items: center;
+          span{
+              font-size: 13px;
+              margin-right: 5px;
+              color: #5a5959;
+              &:nth-child(1){
+                  padding: 4px 6px;
+                  background: #cccccc;
+                  border-radius: 3px;                    
+              }
+              &:nth-child(2){
+                  padding: 4px 6px;
+                  background: #f5c29e;
+                  border-radius: 3px;
+                  color: #d66d13;                   
+              }
+          }
+      }
+      &:nth-child(2){
+          align-items: center;
+          span{
+              &:nth-child(1){
+                  font-size: 13px;
+                  margin-right: 5px;
+                  color: #5a5959;
+              }
+          }
+      }
+  }
+}

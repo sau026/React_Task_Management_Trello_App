@@ -1,0 +1,56 @@
+@import './../../styles/colors';
+
+.header__component-container {
+    width: 100%;
+    background: $pureWhite;
+    .header__site-branding {
+        display: flex;
+        box-shadow: -3px 1px 1px 0px #cacaca;
+        div{
+            display: flex;
+            align-items: center;
+            flex:1;
+            padding: 1rem 1rem;
+            &:nth-child(1){
+                font-size: 13px;
+                color: #5a5959;
+                .icon{
+                    margin-right: 10px;
+                }
+            }
+            &:nth-child(2){
+                justify-content: center;
+                font-size: 13px;
+                color: #000000;
+                font-weight: 500;
+                span{
+                    margin-right: 5px;
+                }
+                .down-arrow{
+                    transform: rotate(90deg);
+                    font-size: 16px;
+                    margin-top: 1px;
+                }
+                @media only screen and (max-width: 480px) {
+                    display: none;
+                }
+            } &:nth-child(3){
+                justify-content: flex-end;
+                font-size: 13px;
+                color: #5a5959;
+                .icon{
+                    margin-right: 10px;
+                    font-size: 14px;
+                    background: #fff;
+                    border: 1px solid #fbfbfb;
+                    padding: 5px;
+                    border-radius: 4px;
+                    box-shadow: 1px 1px #d2d2d27d
+                }
+                img{
+                    max-width: 1.5rem;
+                }
+            }
+        }
+    }
+}

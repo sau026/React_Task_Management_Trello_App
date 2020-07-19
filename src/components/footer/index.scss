@@ -1,0 +1,22 @@
+@import './../../styles/colors';
+
+.footer__component-container {
+    width: 100%;
+    background: $blueBackground;
+    height: 50px;
+    display: flex;
+    .footer__site-branding {
+        display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+        display: flex;
+        color: $textColor;
+        .footer__site-nav {
+            a {
+                text-decoration: none;
+                color: $textColor;
+            }
+        }
+    }
+}

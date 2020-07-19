@@ -1,0 +1,222 @@
+
+@import './../../styles/colors';
+
+.dashboard__page-conatiner {
+    color: $pureBlack;
+    width: 100%;
+    height: calc( 100vh - 16rem);
+    .side-panel{
+      position: fixed;
+      width: 3rem;
+      max-width: 3rem; 
+    }
+    .main-body{
+      margin-left: 3rem;
+      overflow: hidden;
+      height: 100vh;
+      @media only screen and (max-width: 480px) {
+        overflow: auto;
+      }
+    }
+    .fab-btn{
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        background: #1276fa;
+        border: navajowhite;
+        cursor: pointer;
+        position: fixed;
+        font-size: 42px;
+        bottom: 2rem;
+        right: 2rem;
+        color: $textColor;
+        z-index: 1;
+        &:focus{
+            outline: none;
+        }
+    }
+   
+    .dashboard__message-wrapper {
+        margin: auto;
+        text-align: center;
+        display: flex;
+        TaskBoard{
+            flex: 1;
+        }
+    }
+    .main-task-board{
+        div{
+            width: 100%;
+        }
+        .smooth-dnd-container.horizontal{
+          white-space: unset;
+            section{
+                h4{
+                    margin: 10px 0;
+                }
+            }
+            .react-trello-lane{
+                margin: 5px 10px;
+                padding: 15px;
+                width: 23.6% !important;
+                @media only screen and (max-width: 480px) {
+                  width: 95% !important;
+                }
+                .sc-fzoLsD{
+                  min-width: 100% !important;
+                  max-height: 70vh;
+                  @media only screen and (max-width: 480px) {
+                    max-height: 50vh;
+                  }
+                }
+            }
+        }
+    }
+}
+
+//toggle btn css
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 15px;
+    margin-top: 3px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 11px;
+    width: 10px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+  //drg css
+
+  .droppable {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: 0;
+    top: 10;
+    background-color: #9E9E9E;
+    border-left: 2px dotted red;
+  }
+  
+  .draggable {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    margin: 10px auto;
+  }
+  
+  .inProgress {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 0;
+    top: 10;
+    background-color: #EEEEEE;
+    border-right: 2px dotted red;
+  }
+
+article{
+    &::before{
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 1;
+      left: 18px;
+      top: 10px;
+      bottom: 0;
+      left: 0;
+      border: 5px solid red;
+      border-width: 0 0 0 3px;
+      height: 41px;
+    }
+
+    //tooltip css
+    .tooltip {
+      position: relative;
+      display: inline-block;      
+    }
+    
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: #1955a5;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      top: -24px;
+      padding: 5px 0;
+      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+      /* Position the tooltip */
+      position: absolute;
+      z-index: 1;
+      span{
+        margin-top: 2px;
+        margin-top: 2px;
+
+      }
+    }
+    
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+}
+
+.spinner{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  font-size: 50px;
+}
